@@ -3,7 +3,7 @@ server {
  
     server_name 127.0.0.1 localhost;
  
-    root /var/www/html/thunder/docroot;
+    root /var/www/html/thunder-8.x-2.44;
     index index.php index.html index.htm;
 
     location / {
@@ -19,7 +19,7 @@ server {
         fastcgi_read_timeout 61;
         try_files $uri $uri/ =404;
         #   Путь к сокету PHP-FPM
-        fastcgi_pass unix:/var/run/php/php7.3-fpm.sock;
+        fastcgi_pass unix:/var/run/php-fpm/php7.3-fpm.sock;
         fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
         include fastcgi_params;
     }

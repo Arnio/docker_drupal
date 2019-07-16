@@ -1,3 +1,3 @@
 #!/bin/bash
-/etc/init.d/php7.3-fpm start
+/usr/sbin/php-fpm
 nginx -g "daemon off;"
