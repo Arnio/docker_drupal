@@ -9,22 +9,23 @@ RUN yum install -y nginx \
                     unzip \
                     php \
                     php-fpm \
-                    php-common \
+                    php-pdo_mysql \
+                    php-session \
+                    php-simplexml \
+                    php-xmlwriter \
                     php-opcache \
+                    php-tokenizer \
+                    php-common \
                     php-mbstring \
-                    php-xmlrpc \
+                    php-xml \
                     php-soap \
+                    php-dom \
                     php-gd \
-                    php-xml \
-                    php-intl \
-                    php-mysql \
-                    php-cli \
-                    php-tidy \
-                    php-recode \
-                    php-zip \
-                    php-xml \
+                    php-xdebug \
                     php-curl && \
-    yum  -y clean all
+    yum  -y clean all && \
+    rm -rf /var/cache/yum && \
+    rm -rf /var/tmp/yum-*
 
 RUN sed -i -e 's/;cgi.fix_pathinfo=1/cgi.fix_pathinfo=0/g' /etc/php.ini && \
     mkdir -p /var/www/html /var/run/php-fpm/ && \
