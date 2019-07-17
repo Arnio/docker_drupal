@@ -28,7 +28,7 @@ RUN yum install -y nginx \
     rm -rf /var/tmp/yum-*
 
 RUN sed -i -e 's/;cgi.fix_pathinfo=1/cgi.fix_pathinfo=0/g' /etc/php.ini && \
-    mkdir -p /var/www/html /var/run/php-fpm/ && \
+    mkdir -p /var/www/html /var/run/php/ /var/run/php-fpm/ && \
     curl -sS https://getcomposer.org/installer -o composer-setup.php && \
     php composer-setup.php --install-dir=/usr/local/bin --filename=composer 
 
