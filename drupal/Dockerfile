@@ -1,6 +1,6 @@
 # FROM arnio/ubuntu-fpm7.3:1.0
-FROM arnio/centos7-fpm7.3:1.0
-# FROM arnio/alpine-fpm7.3:1.0
+# FROM arnio/centos7-fpm7.3:1.0
+FROM arnio/alpine-fpm7.3:1.0
 
 ADD /drupal-8.7.4.tar.gz /var/www/html/
 
