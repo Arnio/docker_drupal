@@ -2,7 +2,7 @@ server {
     listen 80 default_server;
  
     server_name 127.0.0.1 localhost;
- 
+   
     root /var/www/html/drupal-8.7.4;
     index index.php index.html index.htm;
 
