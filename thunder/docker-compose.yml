@@ -18,8 +18,7 @@ services:
     restart: always
 
   app_thunder:
-    build: ./
-    image: arnio/thunder:1.0
+    image: arnio/thunder:latest
     environment:
       TZ: Europe/Kiev
     ports:
