@@ -13,9 +13,9 @@ services:
     restart: always
 
   app_thunder:
-    image: arnio/thunder:$TAG"
-    environment:
-      TZ: Europe/Kiev
+    image: "arnio/thunder:${TAG}"
+    env_file:
+      - .env
     ports:
       - "8000:80"
     links:
