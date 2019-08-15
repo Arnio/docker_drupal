@@ -13,7 +13,7 @@ services:
     restart: always
 
   app_thunder:
-    image: "arnio/thunder:${TAG}"
+    image: arnio/thunder
     env_file:
       - .env
     ports:
