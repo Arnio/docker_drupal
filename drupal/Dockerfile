@@ -2,9 +2,9 @@
 # FROM arnio/centos7-fpm7.3:1.0
 FROM arnio/alpine-fpm7.3:1.0
 
-ADD /drupal-8.7.4.tar.gz /var/www/html/
+ADD /drupal-8.8.2.tar.gz /var/www/html/
 
-RUN cd /var/www/html/drupal-8.7.4 && \
+RUN cd /var/www/html/drupal-8.8.2 && \
     composer install --no-progress --profile --prefer-dist && \
     chown -R nginx:nginx /var/www/html 
 
